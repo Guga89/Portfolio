@@ -11,6 +11,7 @@
 	--outer-shadow: 3px 3px #d0d0d0, -3px -3px #f8f8f8;
 	--outer-shadow-0: 0 0 #d0d0d0, 0 0 #f8f8f8;
 	--inner-shadow: inset 3px 3px #d0d0d0, inset -3px -3px #f8f8f8;
+	--inner-shadow-0: inset 0 0  #d0d0d0, inset 0 0 #f8f8f8;
 }
 
 body {
@@ -210,6 +211,17 @@ img {
 	}
 	50% {
 		transform: translateX(50%);
+	}
+}
+
+@keyframes fadeInTop {
+	0%{
+		opacity: 0;
+		transform: translateY(-25%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
 	}
 }
 
@@ -522,6 +534,11 @@ img {
 .about-section .tab-content {
 	flex: 0 0 100%;
 	max-width: 100%;
+	display: none;
+}
+.about-section .tab-content.active {
+	display: block;
+	animation: fadeInTop .5s ease;
 }
 
 .about-section .skills {
@@ -610,7 +627,7 @@ img {
 	position: absolute;
 	width: 30px;
 	height: 1px;
-	background-color: red;
+	background-color:var(--bg-black-100);
 	top: 37px;
 }
 
@@ -669,3 +686,76 @@ img {
 	line-height: 26px;
 	margin: 15px 0 0;
 }
+
+.service-section {
+	padding: 80px 0;
+	min-height: 100vh;
+}
+
+.service-section .service-item {
+	flex: 0 0 25%;
+	max-width: 25%;
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.service-section .service-item-inner {
+	padding: 50px 15px;
+	border-radius: 5px;
+	text-align: center;
+	width: 100%;
+}
+.service-section .service-item-inner .icon {
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	border-radius: 50%;
+	transition: all .3s ease;
+	display: block;
+	margin: 0 auto 30px;
+	position: relative;
+
+}
+.service-section .service-item-inner .icon::after {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+transition: all .3s ease;
+}
+.service-section .service-item-inner:hover .icon {
+	box-shadow: var(--inner-shadow-0);
+}
+
+.service-section .service-item-inner:hover .icon::after {
+	box-shadow: var(--outer-shadow);
+}
+.service-section .service-item-inner .icon i{
+	font-size: 25px;
+	line-height: 60px;
+	transition: all .3s ease;
+}
+
+.service-section .service-item-inner:hover .icon i{
+	color: var(--skin-color);
+}
+
+.service-section .service-item-inner h3{
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--text-black-700);
+	text-transform: capitalize;
+	margin: 10px;
+}
+
+.service-section .service-item-inner p{
+	font-size: 16px;
+	color: var(--text-black-600);
+	margin: 0;
+	line-height: 26px;
+}
+
