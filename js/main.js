@@ -1,5 +1,37 @@
-// about section tabs
+// navigation menu
 
+(() => {
+    const hamburgerBtn = document.querySelector('.hamburger-btn'),
+        navMenu = document.querySelector('.nav-menu'),
+        closeNavBtn = navMenu.querySelector('.close-nav-menu');
+
+    hamburgerBtn.addEventListener('click', showNavMenu);
+    closeNavBtn.addEventListener('click', hideNavMenu);
+
+    function showNavMenu() {
+        navMenu.classList.add('open')
+        // bodyScrollingToggle()
+    }
+    function hideNavMenu() {
+        navMenu.classList.remove('open')
+        // bodyScrollingToggle()
+    }
+
+    navMenu.addEventListener('click', (e) => {
+
+        navMenu.querySelector('.active').classList.add('outer-shadow', 'hover-in-shadow');
+        navMenu.querySelector('.active').classList.remove('active', 'inner-shadow');
+
+        e.target.classList.add('active', 'inner-shadow');
+        e.target.classList.remove('outer-shadow', 'hover-in-shadow');
+
+        hideNavMenu()
+    })
+
+})();
+
+
+//about
 (() => {
     const aboutSection = document.querySelector('.about-section'),
         tabsContainer = document.querySelector('.about-tabs');
@@ -151,3 +183,12 @@ function bodyScrollingToggle() {
         }
     })
 })();
+
+// (() => {
+//     const sections = document.querySelectorAll('.section');
+//     sections.forEach((section) => {
+//         if (!section.classList.contains('active')) {
+//             section.classList.add('hide')
+//         }
+//     })
+// })

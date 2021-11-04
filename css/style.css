@@ -15,6 +15,22 @@
 	--inner-shadow-0: inset 0 0  #d0d0d0, inset 0 0 #f8f8f8;
 }
 
+/* dark mode theme colors */
+body.dark {
+	--bg-black-900: #ffffff;
+	--bg-black-100: #353535;
+	--bg-black-50: #2b2c2f;
+	--bg-opacity: rgba(43, 44, 47, 0.5);
+	--text-black-900: #ffffff;
+	--text-black-700: #ffffff;
+	--text-black-600: #666666;
+	--outer-shadow: 3px 3px #222327, -3px -3px #363636;
+	--outer-shadow-0: 0 0 #222327, 0 0 #363636;
+	--inner-shadow: inset 3px 3px #222327, inset -3px -3px #363636;
+	--inner-shadow-0: inset 0 0  #222327, inset 0 0 #363636;
+}
+
+
 body {
 	font-size: 16px;
 	line-height: 1.5;
@@ -132,6 +148,7 @@ img {
 	right: 10%;
 	bottom: 10%;
 	animation: spin 10s linear infinite;
+	transition: all .3s ease;
 }
 
 .effect-2 {
@@ -256,6 +273,11 @@ img {
 	font-size: 16px;
 	color: var(--skin-color);
 }
+
+.section.hide {
+	display: none;
+}
+
 .header {
 	padding: 20px 15px;
 	position: absolute;
@@ -278,6 +300,8 @@ img {
 	font-weight: 700;
 }
 .header .hamburger-btn {
+	position: fixed;
+	right: 15px;
 	height: 40px;
 	width: 40px;
 	display: flex;
@@ -318,6 +342,7 @@ img {
 .nav-menu {
 	position: fixed;
 	padding: 0 15px;
+	background-color: var(--bg-black-50);
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -327,6 +352,14 @@ img {
 	opacity: 0;
 	visibility: hidden;
 	overflow-y: auto;
+	transition: all .3s ease-in;
+}
+
+.nav-menu.open {
+	visibility: visible;
+	opacity: 1;
+	z-index: 999;
+	transition: all .3s ease-in;
 }
 
 .nav-menu .close-nav-menu {
@@ -373,7 +406,7 @@ img {
 	display: block;
 	font-size: 28px;
 	font-weight: 600;
-	color: var(--text-black-700);
+	color: var(--text-black-600);
 	padding: 5px 30px;
 	text-transform: capitalize;
 	border-radius: 30px;
@@ -425,7 +458,7 @@ img {
 }
 
 .home-section .home-text h1 {
-	color: var(--text-black-700);
+	color: var(--text-black-600);
 	font-size: 20px;
 	font-weight: 500;
 	margin: 0;

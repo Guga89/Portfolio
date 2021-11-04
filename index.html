@@ -10,6 +10,13 @@
   <!-- main css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/skins/color-1.css">
+  <link rel="stylesheet" type="text/css" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" type="text/css" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" type="text/css" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" type="text/css" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" type="text/css" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+
+  <link rel="stylesheet" type="text/css" href="css/style-switcher.css">
 </head>
 
 <body>
@@ -31,17 +38,19 @@
     <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
     <div class="nav-menu-inner">
       <ul>
-        <li><a href="#" class="inner-shadow active">home</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">about</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">skills</a></li>
-        <li><a href="#" class="outer-shadow hover-in-shadow">contact</a></li>
+        <li><a href="#home" class="link-item inner-shadow active">home</a></li>
+        <li><a href="#about" class="link-item outer-shadow hover-in-shadow">about</a></li>
+        <li><a href="#services" class="link-item outer-shadow hover-in-shadow">services</a></li>
+        <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">portfolio</a></li>
+        <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">contact</a></li>
       </ul>
     </div>
     <!-- Copyright text -->
     <p class="copyright-text">&copy; 2021 Gugs Production</p>
   </nav>
+
   <!-- home section start -->
-  <section class="home-section section">
+  <section class="home-section section active" id="home">
 
     <!-- Effects - start -->
     <div class="effect-wrap">
@@ -100,7 +109,7 @@
           <p>Hello!</p>
           <h2>I'm Guvanch</h2>
           <h1>Web Developer</h1>
-          <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+          <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
         </div>
         <div class="home-img">
           <div class="img-box inner-shadow">
@@ -114,7 +123,7 @@
   <!-- home section end -->
 
   <!-- about section start -->
-  <section class="about-section section">
+  <section class="about-section section" id="about">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -149,7 +158,7 @@
 
           </p>
           <a href="Guvanch_Jumayev_CV.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
-          <a href="#" class="btn-1 outer-shadow hover-in-shadow">Contact Me</a>
+          <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Contact Me</a>
         </div>
         <!-- about tabs start -->
         <!-- skills end -->
@@ -350,7 +359,7 @@
   <!-- about section end -->
 
   <!-- service section start -->
-  <section class="service-section">
+  <section class="service-section section" id="services">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -401,7 +410,7 @@
   <!-- service section end -->
 
   <!-- portfoli section start -->
-  <section class="portfolio-section section">
+  <section class="portfolio-section section" id="portfolio">
     <div class="container">
       <div class="row">
         <div class="section-title">
@@ -580,8 +589,31 @@
   </div>
   <!-- portfolio popup end -->
 
+  <!-- style switcher start -->
+
+  <div class="style-switcher outer-shadow">
+    <div class="style-toggler s-icon outer-shadow hover-in-shadow">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon outer-shadow hover-in-shadow">
+      <i class="fas"></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+
+  <!-- style switcher end -->
+
+
+
   <!-- contact section start -->
-  <section class="contact-section section">
+  <section class="contact-section section" id="contact">
     <div class="container">
       <div class="row">
         <div class="section-title">
