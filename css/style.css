@@ -152,8 +152,8 @@ img {
 }
 
 .effect-2 {
-	left: 3%;
-	bottom: 20%;
+	left: 10%;
+	bottom: 10%;
 	width: 40px;
 	display: flex;
 	flex-wrap: wrap;
@@ -166,6 +166,15 @@ img {
 	width: 3px;
 	background-color: #ff9c07;
 	margin: 0 3px 8px;
+	border-radius: 50%;
+}
+
+.effect-2 i{
+	position: relative;
+	color: #ff9c07;
+	font-size: 40px;
+	left: 38rem;
+	top: 1rem;
 }
 
 .effect-3 {
