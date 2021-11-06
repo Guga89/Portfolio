@@ -16,6 +16,10 @@
 }
 
 /* dark mode theme colors */
+
+html {
+	scroll-behavior: smooth;
+}
 body.dark {
 	--bg-black-900: #ffffff;
 	--bg-black-100: #353535;
@@ -171,7 +175,7 @@ img {
 
 .effect-2 i{
 	position: relative;
-	color: #ff9c07;
+	color:var(--skin-color);
 	font-size: 40px;
 	left: 38rem;
 	top: 1rem;
@@ -182,7 +186,7 @@ img {
 	width: 200px;
 	border: 30px solid var(--skin-color);
 	border-radius: 50%;
-	top: -120px;
+	top: -150px;
 	left: 50%;
 	animation: leftBounce 5s ease-in-out infinite;
 }
@@ -215,6 +219,7 @@ img {
 	border-radius: 50%;
 	overflow: hidden;
 	animation: spin 10s linear infinite;
+	opacity: 0;
 }
 .effect-5 div {
 	width: 1px;
